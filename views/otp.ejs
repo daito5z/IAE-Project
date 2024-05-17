@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="/stylesheets/otp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+  <body>
+    
+    <div class="container">
+        
+        <nav>
+            <div class="heading">
+                <h1 id="elect"><span id="cap">E</span><span id="cur">lect</span><span class="right"><span id="cap">E</span><span id="cur">ase</span></span></h1>
+            </div>
+        </nav>
+        <form id="otpForm" method="POST" action="auth/verifyOTP">
+            <div class="container1">
+                <p class="title">Enter OTP</p>
+                    <div class="input_fields">
+                        <input type="number" name="digit1">
+                        <input type="number" name="digit2" disabled>
+                        <input type="number" name="digit3" disabled>
+                        <input type="number" name="digit4" disabled>
+                    </div>
+                    <button type="submit" class="verify">Verify</button> 
+            </div>
+        </form>  
+    </div> 
+   
+    
+    <script src="/asset/otp_auto.js"></script>
+ </body>
+</html>

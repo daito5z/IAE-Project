@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="otp_test.css">
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    background:   linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(3, 102, 168) 150%);
+    animation: fade 10s infinite alternate;
+    background-color: rgba(67, 67, 67, 0);
+    min-height: 700px;
+}
+#l1{
+    /* background-color: bisque; */
+    margin: 10% 0% 5% 35%;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    align-items: baseline;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 3cm; 
+}
+#l2{
+    padding-top: 30PX;
+}
+
+.container{
+    display: none;
+width: 200px;
+height: 120px;
+padding: 40px 30px;
+background-color:  linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(3, 102, 168) 150%);
+display: flex;
+ flex-direction: column; 
+justify-content: center;
+align-items: center;
+border-radius: 15px;
+transform: scale(1.75) ;
+margin-left: 120px;
+margin-top: 30px;
+}
+.container h4{
+font-size: 20px;
+color: #f19d2f;
+font-family: sans-serif;
+transform: scale(1.25) ;
+}
+
+.container form{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+form .input_fields{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+.input_fields input{
+max-width: 20%;
+height: 60px;
+text-align: center;
+border-radius: 5px;
+border: none;
+background: #f0f0f0;
+font-size: 25px;
+}
+
+.input_fields input::-webkit-inner-spin-button,
+.input_fields input::-webkit-outer-spin-button{
+display: none;
+}
+
+.input_fields input:focus{
+outline: 3px solid #d0f309;
+outline-offset: 2px;
+}
+
+#verify{
+cursor: pointer;
+margin-top: 25px;
+width: 92%;
+border-radius: 6px;
+font-size: 16px;
+
+}
+#verify:hover{
+background-color: rgb(68, 228, 24);
+} 
+#email{
+height: 40px;
+width: 400px;
+border-radius: 10px;
+border: #e4f315 solid 1.5px;
+background-color: antiquewhite;
+font-size: larger;
+}
+#send{
+    border-radius: 10px;  
+    cursor: pointer;
+     background-color: rgb(230, 247, 48);
+      height: 30px;
+       width: 105px;
+        text-align: center;
+         transform: scale(1.25)
+}
+#verify{
+   
+      background-color: rgb(230, 247, 48);
+       height: 35px;
+        width: 135px;
+         text-align: center;
+          transform: scale(1.75)
+}
+    </style>
+</head>
+
+<body style="background-color: beige;">
+    <div id="l1">
+        <div id="otpveri">
+            
+            <br><br>
+        <div class="container">
+
+            <h4>Enter Your 4 Digit OTP</h4>
+    
+            <form action="auth/verifyOTP" method="post">
+                <div class="input_fields">
+                    <input type="number" name="digit1">
+                    <input type="number"  name="digit2" disabled>
+                    <input type="number"  name="digit3" disabled>
+                    <input type="number"  name="digit4" disabled>
+                </div>
+                <br><br><br>
+                <button id="verify" >verify</button>
+            </form>
+            
+    </div>
+        
+</div>
+    
+    <script src="otp_auto.js">
+
+    </script>
+</body>
+</html>

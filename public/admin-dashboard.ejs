@@ -1,0 +1,35 @@
+<!-- views/admin/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    
+    <h2>All Users</h2>
+    <a href="/admin/logout"><span id="logout">Logout</span></a>
+    <ul>
+        <% users.forEach(user => { %>
+            <li>
+                <strong>Name:</strong> <%= user.name %><br>
+                <strong>Email:</strong> <%= user.email %><br>
+                <strong>Phone Number:</strong> <%= user.phno %><br>
+                <form action="/admin/users/<%= user.id %>?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit">Delete User</button>
+                </form>
+                <form action="/admin/users/<%= user.id %>?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="text" name="name" placeholder="New Name">
+                    <input type="text" name="email" placeholder="New Email">
+                    <input type="text" name="phno" placeholder="New Phone Number">
+                    <button type="submit">Update User</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
